@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cute+Font&display=swap" rel="stylesheet">
+    <title>Date?</title>
+  </head>
+  <body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li><a href="About.html">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <video autoplay loop muted plays-inline class="background-clip">
+            <source src="images/heart.mp4" type="video/mp4" />
+          </video>
+
+        <div class="answer-box">
+                <button class="answer" id="yes">Yes!!!</button>
+                <button class="answer" id="no">No</button>
+        </div>
+        
+    </div>
+
+    <div class="confirmation">
+        <h1>One more Step Closer 👇</h1>
+            <div class="question">
+                </div>
+                    <button class="answer" id="fix">Lets Fix a date</button>
+            </div>
+    </div>
+
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 toxicf1sh</p>
+    </footer>
+
+    <script>
+        const yes = document.querySelector("#yes");
+        const no = document.querySelector("#no");
+        const confirmation = document.querySelector(".confirmation");
+        const container = document.querySelector(".container");
+
+        let clickCounter = 0;  // Initialize the click counter
+
+        const yesAnswerMethod = () => {
+            container.style.display = 'none';
+            confirmation.style.display = 'block';
+        };
+
+        const noAnswerMethod = () => {
+            no.style.position = 'absolute';
+
+            let xPosition = Math.floor(Math.random() * container.clientWidth);
+            let yPosition = Math.floor(Math.random() * container.clientHeight);
+
+            no.style.top = `${yPosition}px`;
+            no.style.left = `${xPosition}px`;
+
+            clickCounter++;  // Increment the counter each time the "no" button is clicked
+
+            if (clickCounter > 4) {
+                window.open('https://papertoilet.com', '_blank');  // Open the new link
+            }
+        };
+
+        no.addEventListener('click', noAnswerMethod);
+        yes.addEventListener('click', yesAnswerMethod);
+
+        document.getElementById("fix").addEventListener("click", function() {
+            window.location = "https://www.instagram.com/toxicf1sh";
+        }, false);
+    </script>
+  </body>
+</html>
