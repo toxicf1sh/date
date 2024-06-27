@@ -1,124 +1,293 @@
 * {
+    margin: 0;
     padding: 0;
-    margin: 0;
     box-sizing: border-box;
-    font-family: "Cute Font";
-    background-color: pink;
-  }  
-
-  .header {
-    background-color:pink; /* Background color */
-    color: #333; /* Text color */
-    padding: 20px; /* Padding around content */
-    display: flex; /* Flexbox layout */
-    justify-content: space-between; /* Space between logo and navigation */
-    align-items: center; /* Center vertically */
-    font-size: 50px;
   }
   
-  /* Adjust the order of the logo and navigation */
-  .header .logo {
-    order: 1; /* Place logo to the right */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333;
   }
   
-  .navbar {
-    order: 2; /* Place navigation to the left */
-  }
-  
-  .logo img {
-      width: 100px; /* Adjust logo width */
-      height: 35px; /* Maintain aspect ratio */
-  }
-  
-  .nav-menu {
-      list-style-type: none; /* Remove bullet points */
-  }
-  
-  .nav-menu li {
-      display: inline-block; /* Display menu items horizontally */
-      margin-right: 20px; /* Spacing between menu items */
-  }
-  
-  .nav-menu li:last-child {
-      margin-right: 0; /* No margin on the last menu item */
-  }
-  
-  .nav-menu li a {
-      text-decoration: none; /* Remove underline from links */
-      color: #000000; /* Text color */
-      transition: color 0.3s; /* Smooth color transition */
-  }
-  
-  .nav-menu li a:hover {
-      color: #ff6600; /* Change text color on hover */
-  }
-
-/* About me section styles */
-.about-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: pink;
-    height: auto;
-}
-
-.about-me {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+  .container {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
     padding: 20px;
-    width: 100%;
-    height: auto;
-}
-
-.about-image img {
-    width: 150px; /* Adjust image width */
-    height: 200px; /* Maintain aspect ratio */
-    border: solid rgb(255, 0, 149) 5px;
-    margin-top: 15px;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-.about-text {
-    flex: 1;
-    display: block;
-}
-
-.about-text h1 {
-    font-size: 50px;
-    color: #000000;
-}
-
-.about-text p {
-    font-size: 25px;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.footter-con {
-    display: fixed;
-    background-color: pink;
-    height: 200px;
-    width: auto;
-    margin-top: 20px;
-}
-
-
-.footer {
-    width: 100%;
-    height: auto;
-    background-color: pink;
-    color: rgb(0, 0, 0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
-  .footer p {
-    margin: 0;
-    font-size: 35px;
-    font-weight: 400;
+  h1 {
+    text-align: center;
+    color: #444;
   }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  input,
+  textarea,
+  select,
+  button {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button {
+    margin-top: 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  #result {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .profile {
+    margin-top: 2em;
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .profile-picture {
+    max-width: 100%;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1em;
+  }
+  
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .profile-text {
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.5;
+    width: 100%;
+    word-wrap: break-word;
+  }
+  
+  .profile-text h2 {
+    margin: 0;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .profile-text p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .profile-text p strong {
+    color: #333;
+  }
+  
+  .profile-bio {
+    white-space: pre-wrap; /* Preserve white spaces and breaks */
+    width: 100%;
+  }
+  
+  /* Footer styles */
+  footer {
+    text-align: center;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    margin-top: auto;
+  }
+  
+  footer a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  footer a:hover {
+    color: #007bff;
+  }
+  
+  @media (min-width: 600px) {
+    .profile {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  
+    .profile-picture {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+  
+    .profile-info {
+      align-items: flex-start;
+    }
+  
+    .profile-text {
+      text-align: left;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* styles.css */
+  
+  /* Reset and basic styling */
+  
+  /* Navbar styles */
+  .navbar {
+      background-color: transparent; /* Dark background color */
+      position: relative; /* Fixed position at the top */
+      width: 100%; /* Full width */
+      z-index: 1000; /* Ensure it's above other content */
+    }
+    
+    .containerr {
+      max-width: 1200px; /* Limit width */
+      margin: 0 auto; /* Center align */
+      padding: 10px 20px; /* Padding for content */
+      display: flex; /* Flexbox for layout */
+      justify-content: space-between; /* Space between items */
+      align-items: center; /* Center vertically */
+    }
+    
+    .logo {
+      font-size: 1.5rem; /* Larger font size */
+      text-decoration: none; /* Remove underline */
+      color: #000000; /* White text color */
+      width: 180px;
+    }
+    
+    .logo img {
+        display: block; /* Ensures the image is a block element */
+        width: 100px;
+  height: 35px;
+      }
+    
+    .nav-menu {
+      list-style-type: none; /* Remove default list styles */
+      margin: 0; /* Remove default margin */
+      padding: 0; /* Remove default padding */
+      display: flex; /* Flexbox for layout */
+    }
+    
+    .nav-menu li {
+      margin-right: 15px; /* Spacing between items */
+    }
+    
+    .nav-menu li a {
+      color: #000000; /* White text color */
+      text-decoration: none; /* Remove underline */
+      padding: 10px 15px; /* Padding for links */
+      display: block; /* Block display for full width */
+      transition: background-color 0.3s ease; /* Smooth transition */
+    }
+    
+    .nav-menu li a:hover {
+      background-color: #555; /* Darker background on hover */
+    }
+    
+    /* Hamburger menu */
+    .nav-toggle {
+      display: none; /* Hide checkbox */
+    }
+    
+    .nav-toggle-label {
+      cursor: pointer; /* Pointer cursor */
+      display: block; /* Block display for full width */
+      padding: 0 15px; /* Padding for toggle */
+    }
+    
+    .nav-toggle-label span {
+      display: block; /* Block display for full width */
+      width: 25px; /* Width of hamburger lines */
+      height: 2px; /* Height of hamburger lines */
+      background-color: #000000; /* White color */
+      margin: 5px 0; /* Margin between lines */
+      transition: transform 0.3s ease; /* Smooth transition */
+    }
+    
+    .nav-toggle:checked + .nav-toggle-label span {
+      transform: rotate(45deg); /* Rotate lines for X shape */
+    }
+    
+    .nav-menu {
+      position: absolute; /* Position absolutely */
+      top: 100%; /* Place below navbar */
+      left: 0; /* Align to left edge */
+      width: 100%; /* Full width */
+      background-color: #ffffff; /* Dark background color */
+      display: none; /* Initially hidden */
+    }
+    
+    .nav-toggle:checked + .nav-toggle-label + .nav-menu {
+      display: flex; /* Display flex on toggle */
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center align items */
+    }
+    
+    @media (min-width: 768px) {
+      .container {
+        padding: 10px 40px; /* Increased padding for larger screens */
+      }
+    
+      .nav-menu {
+        position: relative; /* Return to normal flow */
+        display: flex; /* Flexbox for layout */
+        justify-content: flex-end; /* Right align links */
+        background-color: transparent; /* Transparent background */
+      }
+    
+      .nav-menu li {
+        margin-right: 20px; /* Larger spacing between items */
+      }
+    
+      .nav-toggle-label {
+        display: none; /* Hide toggle on larger screens */
+      }
+    }
+    
+  
+    
