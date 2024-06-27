@@ -6,7 +6,7 @@ const container = document.querySelector(".container");
 let clickCounter = 0;
 
 const yesAnswerMethod = () => {
-  window.location.href = 'about.html';
+  window.location.href = 'About.html';
 };
 
 const noAnswerMethod = () => {
