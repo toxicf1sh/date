@@ -20,7 +20,7 @@ const noAnswerMethod = () => {
 
   clickCounter++;
 
-  if (clickCounter > 4) {
+  if (clickCounter > 2) {
     window.open('https://papertoilet.com', '_blank');
   }
 };
